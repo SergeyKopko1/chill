@@ -1,8 +1,7 @@
 import React, { FC } from 'react';
-import Layout from '@/components/Layout';
 
 const Test: FC = () => {
-  return <Layout />;
+  return (<></>);
 };
 
 export default Test;
