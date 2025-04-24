@@ -19,7 +19,6 @@ Router.events.on('routeChangeError', () => NProgress.done());
 const MyApp: FC<AppProps> = ({ Component, pageProps }) => {
   return (
     <AppTheme>
-      <CssBaseline />
       <Component {...pageProps} />
     </AppTheme>
   );

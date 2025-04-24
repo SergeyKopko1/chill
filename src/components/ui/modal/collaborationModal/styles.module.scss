@@ -1,0 +1,151 @@
+// Основные цвета и переменные
+$primary-blue: #e6f7ff;
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  cursor: pointer;
+}
+
+.modal__content {
+  padding: 20px;
+  background: transparent;
+  border-radius: 10px;
+  position: relative;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: visible;
+  z-index: 1000;
+  cursor: default;
+  perspective: 1000px; /* Добавляет 3D-пространство */
+}
+
+.bookWrapper {
+  position: relative;
+  display: inline-block; /* Обеспечивает правильное позиционирование */
+}
+
+.bookSpine {
+  position: absolute;
+  left: -20px; /* Расположение корешка слева от книги */
+  top: 0;
+  width: 20px; /* Толщина корешка */
+  height: 100%; /* Полная высота книги */
+  background: repeating-linear-gradient(
+    to bottom,
+    #ccc, /* Светло-серый для краев страниц */
+    #ccc 10px,
+    #999 10px, /* Темно-серый для разделения страниц */
+    #999 20px
+  );
+  transform: rotateY(90deg); /* Поворот корешка для 3D-вида */
+  transform-origin: left; /* Поворот относительно левого края */
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.2); /* Тень для глубины */
+}
+
+.flipBook {
+  background: #f5f5f5;
+  border-radius: 5px;
+  max-width: 600px;
+  max-height: 450px;
+  display: flex;
+  align-items: flex-start;
+  transform-style: preserve-3d; /* Сохраняет 3D-рендеринг */
+}
+
+.demoPage {
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  border: 1px solid #ccc;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+}
+
+.leftPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.rightPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding: 20px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.pageImage {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+  border-bottom: 1px solid #ccc;
+}
+
+.description {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 20px;
+  color: #333;
+  text-align: center;
+  flex-grow: 1;
+  font-weight: 400;
+}
+
+.textContent {
+  width: 100%;
+  text-wrap: wrap;
+  margin: 0 auto;
+  font-size: 16px;
+  color: #333;
+  text-align: left;
+  max-width: 80%;
+}
+
+.pageNumber {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: #666;
+}
+
+.close__button {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: white;
+  border: 2px solid $primary-blue;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1) rotate(15deg);
+  }
+}
+
+
+.closeButton:hover {
+  background: #b02a37;
+}
