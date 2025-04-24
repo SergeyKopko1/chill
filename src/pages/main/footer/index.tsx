@@ -3,7 +3,7 @@ import { FaTwitter, FaDiscord, FaInstagram, FaTelegram } from 'react-icons/fa';
 
 export const Footer = () => {
   return (
-    <footer id='footer' className={styles.footer}>
+    <footer id="footer" className={styles.footer}>
       <div className={styles.footer__content}>
         <div className={styles.footer__snow}></div>
 

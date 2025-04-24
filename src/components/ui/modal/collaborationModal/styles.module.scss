@@ -41,10 +41,10 @@ $primary-blue: #e6f7ff;
   height: 100%; /* Полная высота книги */
   background: repeating-linear-gradient(
     to bottom,
-    #ccc, /* Светло-серый для краев страниц */
-    #ccc 10px,
-    #999 10px, /* Темно-серый для разделения страниц */
-    #999 20px
+    #ccc,
+    /* Светло-серый для краев страниц */ #ccc 10px,
+    #999 10px,
+    /* Темно-серый для разделения страниц */ #999 20px
   );
   transform: rotateY(90deg); /* Поворот корешка для 3D-вида */
   transform-origin: left; /* Поворот относительно левого края */
@@ -144,7 +144,6 @@ $primary-blue: #e6f7ff;
     transform: scale(1.1) rotate(15deg);
   }
 }
-
 
 .closeButton:hover {
   background: #b02a37;

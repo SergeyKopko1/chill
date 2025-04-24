@@ -70,7 +70,7 @@ export const BooksBlock: React.FC = () => {
               gsap.fromTo(
                 iceCrackRef.current,
                 { scaleY: 0, opacity: 0 },
-                { scaleY: 1, opacity: 1, duration: 0.5 },
+                { scaleY: 1, opacity: 1, duration: 0.5 }
               );
             }
 
@@ -141,7 +141,7 @@ export const BooksBlock: React.FC = () => {
   };
 
   return (
-    <section id='books' className={styles.books__wrapper}>
+    <section id="books" className={styles.books__wrapper}>
       <span>Collaborations and Histories</span>
       <section className={styles.cardsContainer}>
         {Object.entries(CardInformation).map(([key, pageArray]) => (

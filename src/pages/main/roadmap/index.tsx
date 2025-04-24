@@ -53,7 +53,7 @@ export const Roadmap = () => {
   ];
 
   return (
-    <section id='roadmap' className={styles.container__roadmap}>
+    <section id="roadmap" className={styles.container__roadmap}>
       <h2 className={styles.roadmap__title}>ROADMAP</h2>
       <section className={styles.container__cards__wrapper}>
         {roadmapSteps.map((step, index) => (
@@ -64,13 +64,16 @@ export const Roadmap = () => {
           >
             <div className={styles.card__content}>
               <div className={styles.card__header}>
-                <img src={stepImage.src} alt="step" className={styles.step__icon} />
-                
+                <img
+                  src={stepImage.src}
+                  alt="step"
+                  className={styles.step__icon}
+                />
+
                 <h3 className={styles.step__title}>{step.title}</h3>
               </div>
               <p className={styles.step__description}>{step.description}</p>
             </div>
-          
           </div>
         ))}
       </section>

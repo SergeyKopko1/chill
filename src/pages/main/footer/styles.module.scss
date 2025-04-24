@@ -50,7 +50,7 @@ $snow-color: rgba(255, 255, 255, 0.8);
   padding: 0.8rem 1.5rem;
   background: white;
   border-radius: 50px;
-  box-shadow: 
+  box-shadow:
     0 4px 8px rgba(0, 0, 0, 0.1),
     inset 0 0 0 2px rgba(255, 255, 255, 0.5);
   transition: all 0.3s ease;
@@ -133,8 +133,12 @@ $snow-color: rgba(255, 255, 255, 0.8);
 }
 
 @keyframes snowFall {
-  0% { transform: translateY(0); }
-  100% { transform: translateY(100vh); }
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(100vh);
+  }
 }
 
 // Адаптивность
@@ -142,7 +146,7 @@ $snow-color: rgba(255, 255, 255, 0.8);
   .footer__links {
     gap: 1rem;
   }
-  
+
   .social__link {
     padding: 0.6rem 1rem;
     font-size: 1rem;

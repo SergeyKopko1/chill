@@ -9,9 +9,18 @@ interface ICardProps {
   className?: string; // Added to support className prop
 }
 
-export const Card: FC<ICardProps> = ({ title, description, animation, style, className }) => {
+export const Card: FC<ICardProps> = ({
+  title,
+  description,
+  animation,
+  style,
+  className,
+}) => {
   return (
-    <div className={`${styles.wrapper_container} ${className || ''}`} style={style}>
+    <div
+      className={`${styles.wrapper_container} ${className || ''}`}
+      style={style}
+    >
       <p className={styles.title}>{title}</p>
       <p className={styles.description}>{description}</p>
       {animation && <div>{animation}</div>}

@@ -58,7 +58,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, cardInformation }) => {
             {sectionIndex * pageArray.length * 2 + pageIndex * 2 + 2}
           </span>
         </div>,
-      ]),
+      ])
   );
 
   const handleOverlayClick = (event: React.MouseEvent<HTMLDivElement>) => {
@@ -70,10 +70,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, cardInformation }) => {
   return (
     <div className={styles.modal__overlay} onClick={handleOverlayClick}>
       <div className={styles.modal__content} ref={modalContentRef}>
-        <button
-          className={styles.close__button}
-          onClick={() => onClose()}
-        >
+        <button className={styles.close__button} onClick={() => onClose()}>
           ×
         </button>
         <HTMLFlipBook
@@ -108,6 +105,5 @@ const Modal: React.FC<ModalProps> = ({ onClose, cardInformation }) => {
     </div>
   );
 };
-
 
 export default Modal;

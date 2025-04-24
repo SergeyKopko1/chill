@@ -1,48 +1,47 @@
 @font-face {
-    font-family: 'Comfortaa';
-    src: url('assets/fonts/Comfortaa-Light.ttf') format('truetype');
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Comfortaa';
-    src: url('assets/fonts/Comfortaa-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Comfortaa';
-    src: url('assets/fonts/Comfortaa-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  @font-face {
-    font-family: 'Montserrat';
-    src: url('assets/fonts/Montserrat-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
+  font-family: 'Comfortaa';
+  src: url('assets/fonts/Comfortaa-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
 
-    @font-face {
-    font-family: 'Chill';
-    src: url('assets/fonts/cocana-extrude-left.ttf') format('truetype');
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  html,
-  body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    font-size: 16px;
-    overflow-x: hidden;
-    font-family: 'Chill', Courier, monospace;
-    
-  }
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('assets/fonts/Comfortaa-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Comfortaa';
+  src: url('assets/fonts/Comfortaa-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('assets/fonts/Montserrat-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Chill';
+  src: url('assets/fonts/cocana-extrude-left.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-size: 16px;
+  overflow-x: hidden;
+  font-family: 'Chill', Courier, monospace;
+}
 
 button {
   font-family: 'Chill';

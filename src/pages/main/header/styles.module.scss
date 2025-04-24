@@ -10,7 +10,7 @@ $primary-blue: #e6f7ff;
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
+
   .snowfall {
     position: absolute;
     width: 100%;
@@ -21,21 +21,18 @@ $primary-blue: #e6f7ff;
 }
 
 .container__header {
-
   width: 100%;
   height: 100vh;
   position: absolute;
-  background: linear-gradient(180deg, #2b90cc 70%, rgba(43,145,205,0));
-  
+  background: linear-gradient(180deg, #2b90cc 70%, rgba(43, 145, 205, 0));
 
   > div {
-    
     z-index: 1000;
-    position: relative; 
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw 7vw 0;    
+    padding: 3vw 7vw 0;
 
     > img {
       height: auto;
@@ -56,7 +53,7 @@ $primary-blue: #e6f7ff;
       font-size: 1.2rem;
       transition: all 0.3s ease;
       cursor: pointer;
-      
+
       &:hover {
         background: rgba(255, 255, 255, 0.4);
         transform: translateY(-3px);
@@ -67,7 +64,6 @@ $primary-blue: #e6f7ff;
 }
 
 .close__button {
-
   top: -15px;
   right: -15px;
   width: 40px;
@@ -100,15 +96,13 @@ $primary-blue: #e6f7ff;
   align-items: center;
   justify-content: center;
 
-  
   .menuContent {
-    
     display: flex;
     justify-content: center;
     gap: 2rem;
     flex-wrap: wrap;
     padding-top: 80px;
-    
+
     a {
       color: white;
       font-size: 1.5rem;
@@ -118,7 +112,7 @@ $primary-blue: #e6f7ff;
       background: rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
       font-family: 'Chill';
-      
+
       &:hover {
         background: rgba(255, 255, 255, 0.3);
       }
@@ -160,7 +154,7 @@ $primary-blue: #e6f7ff;
   position: relative;
   text-align: center;
   padding: 15rem 1rem;
-  flex-grow: 1; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -196,7 +190,7 @@ $primary-blue: #e6f7ff;
 
 .bears__header {
   position: relative;
-  margin-top: auto; 
+  margin-top: auto;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -211,11 +205,11 @@ $primary-blue: #e6f7ff;
       max-width: 650px;
       max-height: 600px;
       opacity: 0.9;
-      border-radius:  20% 20%;
+      border-radius: 20% 20%;
       filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
     }
   }
-  
+
   > div:nth-child(1) {
     > img {
       left: 5vw;
@@ -245,13 +239,13 @@ $primary-blue: #e6f7ff;
         max-height: 600px;
       }
     }
-    
+
     > div:nth-child(1) {
       > img {
         left: 200px;
       }
     }
-    
+
     > div:nth-child(3) {
       > img {
         left: -250px;
@@ -261,16 +255,22 @@ $primary-blue: #e6f7ff;
 }
 
 @keyframes float {
-  0% { transform: translateY(0px); }
-  50% { transform: translateY(-20px); }
-  100% { transform: translateY(0px); }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .button {
   font-family: 'Chill';
   position: relative;
   overflow: hidden;
-  
+
   &::after {
     content: '';
     position: absolute;
@@ -283,15 +283,14 @@ $primary-blue: #e6f7ff;
     transform-origin: right;
     transition: transform 0.3s ease;
   }
-  
+
   &:hover::after {
     transform: scaleX(1);
     transform-origin: left;
   }
 }
 
-
 .Igloo {
-    width: 8vw;
-    height: auto;
+  width: 8vw;
+  height: auto;
 }

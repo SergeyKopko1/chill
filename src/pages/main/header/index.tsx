@@ -9,7 +9,7 @@ import BearThree from '@/assets/icon/bear3.png';
 import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Snowfall } from 'react-snowfall';
-import  CloseIcon  from '@/assets/icon/CloseIcon.svg';
+import CloseIcon from '@/assets/icon/CloseIcon.svg';
 
 export const Header: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -48,15 +48,17 @@ export const Header: FC = () => {
             <Image className={styles.Igloo} src={igloo} alt="Igloo" />
           </motion.div>
 
-          <motion.div whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}
-
-                onClick={(e) => {
-                  e.preventDefault();
-                  document.getElementById('information')?.scrollIntoView({
-                    behavior: 'smooth',
-                  });
-                  setMenuOpen(false);
-                }}>
+          <motion.div
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={(e) => {
+              e.preventDefault();
+              document.getElementById('information')?.scrollIntoView({
+                behavior: 'smooth',
+              });
+              setMenuOpen(false);
+            }}
+          >
             <Button className={styles.button} name="Information" />
           </motion.div>
         </div>

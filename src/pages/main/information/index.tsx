@@ -7,9 +7,19 @@ export const Information = () => {
   const [selectedContent, setSelectedContent] = useState<null | number>(null);
 
   const iglooData = [
-    { id: 1, videoUrl: '/assets/videos/igloo1.mp4', text: 'Winter Adventure', image: '/path/to/image1.jpg' },
+    {
+      id: 1,
+      videoUrl: '/assets/videos/igloo1.mp4',
+      text: 'Winter Adventure',
+      image: '/path/to/image1.jpg',
+    },
     { id: 2, imageUrl: ingloo, text: 'Ice Kingdom', image: ingloo.src },
-    { id: 3, videoUrl: '/assets/videos/igloo3.mp4', text: 'Northern Lights', image: '/path/to/image3.jpg' },
+    {
+      id: 3,
+      videoUrl: '/assets/videos/igloo3.mp4',
+      text: 'Northern Lights',
+      image: '/path/to/image3.jpg',
+    },
   ];
 
   const openIgloo = (id: number) => {
@@ -18,7 +28,7 @@ export const Information = () => {
   };
 
   return (
-    <section id='information' className={styles.container__information__main}>
+    <section id="information" className={styles.container__information__main}>
       <p>Information</p>
       <div className={styles.igloos__grid}>
         {iglooData.map((igloo) => (
@@ -47,7 +57,7 @@ export const Information = () => {
                   alt={igloo.text}
                   className={styles.door__image}
                 />
-                <p className={styles.click__text}>{ igloo.text }</p>
+                <p className={styles.click__text}>{igloo.text}</p>
               </div>
             </div>
           </div>

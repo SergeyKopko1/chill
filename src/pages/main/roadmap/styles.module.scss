@@ -17,7 +17,6 @@ $aurora-purple: #bf00ff;
   background: $background-color;
   padding: 5rem 2rem;
   overflow: hidden;
-  
 }
 
 .roadmap__title {
@@ -33,7 +32,6 @@ $aurora-purple: #bf00ff;
   font-size: 63px;
   text-align: center;
   padding-bottom: 30px;
-  
 }
 
 .container__cards__wrapper {
@@ -41,7 +39,7 @@ $aurora-purple: #bf00ff;
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  
+
   &::before {
     content: '';
     position: absolute;
@@ -67,42 +65,44 @@ $aurora-purple: #bf00ff;
   box-shadow: 0 8px 24px rgba(42, 77, 105, 0.2);
   opacity: 0.2;
   transform: translateY(30px) scale(0.8);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   z-index: 2;
-  
+
   &.left {
     float: left;
     clear: both;
-    
+
     .step__connector {
       right: -60px;
       transform: rotate(180deg);
       color: $aurora-green;
     }
-    
+
     .step__number {
       background: $aurora-green;
     }
   }
-  
+
   &.right {
     float: right;
     clear: both;
-    
+
     .step__connector {
       left: -60px;
       color: $aurora-purple;
     }
-    
+
     .step__number {
       background: $aurora-purple;
     }
   }
-  
+
   &.animated {
     animation: slideBounce 0.6s ease-out forwards;
   }
-  
+
   &:hover {
     transform: translateY(-5px) rotate(2deg);
     box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
@@ -157,7 +157,6 @@ $aurora-purple: #bf00ff;
 }
 
 .step__title {
-  
   font-size: 1.5rem;
   color: #000;
   margin: 0;
@@ -171,8 +170,6 @@ $aurora-purple: #bf00ff;
   color: lighten($dark-blue, 10%);
   line-height: 1.6;
   font-size: 1.1rem;
-
-  
 }
 
 .container__cards__wrapper::after {
@@ -186,14 +183,15 @@ $aurora-purple: #bf00ff;
     width: 100%;
     float: none !important;
     margin: 2rem 0;
-    
-    &.left, &.right {
+
+    &.left,
+    &.right {
       .step__connector {
         display: none;
       }
     }
   }
-  
+
   .container__cards__wrapper::before {
     left: 30px;
   }

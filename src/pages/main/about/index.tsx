@@ -44,7 +44,7 @@ export const About = () => {
     <section id="about" className={styles.arctic__wrapper}>
       <div className={styles.iceberg__container}>
         <div className={styles.polar__header}>
-            <span>Arctic Bearers</span>
+          <span>Arctic Bearers</span>
           <div className={styles.aurora}></div>
         </div>
 
@@ -66,7 +66,7 @@ export const About = () => {
                 } as React.CSSProperties
               }
               className={`${styles.iceblock} ${
-                styles[`iceblock--${(index % 3)}`]
+                styles[`iceblock--${index % 3}`]
               }`}
             />
           ))}

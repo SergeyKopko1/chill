@@ -1,67 +1,25 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
+  env: {
+    browser: true,
+    es2021: true,
+  },
   extends: [
-    'airbnb-base',
-    'airbnb/hooks',
+    'airbnb',
+    'plugin:react/recommended',
     'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
-    'plugin:@next/eslint-plugin-next/recommended',
+    'plugin:@typescript-eslint/recommended', // для TypeScript
+    'next/core-web-vitals', // для Next.js
   ],
-  plugins: ['prettier', '@typescript-eslint', '@next/eslint-plugin-next'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', 'prettier', '@typescript-eslint'],
   rules: {
-    'react/require-default-props': 'off',
-    'react/jsx-props-no-spreading': 'off',
-    'react/function-component-definition': 'off',
-    'import/prefer-default-export': 'off',
-    'import/no-extraneous-dependencies': 'off',
-    'react/no-array-index-key': 'off',
-    'react-hooks/exhaustive-deps': 'off',
+    'react/jsx-filename-extension': [1, { extensions: ['.jsx', '.tsx'] }], // Разрешить JSX/TSX в .jsx и .tsx
+    'react/prop-types': 'off', // Отключить, если используете TypeScript
     'prettier/prettier': 'error',
-    'react/react-in-jsx-scope': 'off',
-    'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.jsx'] }],
-    'jsx-a11y/anchor-is-valid': 'off',
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'never',
-        jsx: 'never',
-        ts: 'never',
-        tsx: 'never',
-      },
-    ],
-    'no-param-reassign': 'off',
-    'no-empty': ['error', { allowEmptyCatch: true }],
+    'react/jsx-filename-extension': 'off',
   },
-  settings: {
-    'import/resolver': {
-      alias: {
-        map: [['@', './src']],
-        extensions: ['.ts', '.tsx'],
-      },
-      node: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      },
-      typescript: {
-        project: './tsconfig.json',
-      },
-      react: {
-        version: 'detect',
-      },
-    },
-  },
-  overrides: [
-    {
-      files: [
-        '**/*.test.js',
-        '**/*.test.jsx',
-        '**/*.test.ts',
-        '**/*.test.tsx',
-        'src/setupTests.ts',
-      ],
-      rules: {
-        'import/no-extraneous-dependencies': 'off',
-      },
-    },
-  ],
 };
