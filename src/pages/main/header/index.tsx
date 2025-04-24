@@ -158,7 +158,7 @@ const Header: FC = () => {
             ease: 'easeInOut',
           }}
         >
-          THE CHILL'BE
+        THE CHILL'BE
         </motion.span>
         <p>
           Chilly Beary is a global IP focused on proliferating the penguin,
