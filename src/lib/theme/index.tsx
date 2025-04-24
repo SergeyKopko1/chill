@@ -1,26 +1,25 @@
-import * as React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import type { ThemeOptions } from '@mui/material/styles';
-import { inputsCustomizations } from './customizations/inputs';
+import * as React from 'react';
+
 import { dataDisplayCustomizations } from './customizations/dataDisplay';
 import { feedbackCustomizations } from './customizations/feedback';
+import { inputsCustomizations } from './customizations/inputs';
 import { navigationCustomizations } from './customizations/navigation';
 import { surfacesCustomizations } from './customizations/surfaces';
 import { typography, shadows, shape } from './themePrimitives';
 
 interface AppThemeProps {
   children: React.ReactNode;
-  /**
-   * This is for the docs site. You can ignore it or remove it.
-   */
   disableCustomTheme?: boolean;
   themeComponents?: ThemeOptions['components'];
 }
 
-export default function AppTheme(props: AppThemeProps) {
-  const { children, disableCustomTheme, themeComponents } = props;
-
-  // Создаем темную тему
+const AppTheme = ({
+  children,
+  disableCustomTheme,
+  themeComponents,
+}: AppThemeProps) => {
   const theme = React.useMemo(() => {
     if (disableCustomTheme) {
       return createTheme();
@@ -28,17 +27,17 @@ export default function AppTheme(props: AppThemeProps) {
 
     return createTheme({
       palette: {
-        mode: 'dark', // Устанавливаем темную тему
+        mode: 'dark',
         primary: {
-          main: '#90caf9', // Пример цвета для темной темы
+          main: '#90caf9',
         },
         background: {
-          default: '#121212', // Темный фон
-          paper: '#1e1e1e', // Цвет для элементов, таких как карточки
+          default: '#121212',
+          paper: '#1e1e1e',
         },
         text: {
-          primary: '#ffffff', // Белый текст
-          secondary: '#b3b3b3', // Серый текст
+          primary: '#ffffff',
+          secondary: '#b3b3b3',
         },
       },
       typography,
@@ -55,15 +54,15 @@ export default function AppTheme(props: AppThemeProps) {
     });
   }, [disableCustomTheme, themeComponents]);
 
-  // Если кастомная тема отключена, возвращаем детей без ThemeProvider
   if (disableCustomTheme) {
     return children;
   }
 
-  // Возвращаем ThemeProvider с темной темой
   return (
     <ThemeProvider theme={theme} disableTransitionOnChange>
       {children}
     </ThemeProvider>
   );
-}
+};
+
+export default AppTheme;

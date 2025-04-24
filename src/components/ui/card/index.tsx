@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import styles from './styles.module.scss';
 
 interface ICardProps {
@@ -9,7 +10,7 @@ interface ICardProps {
   className?: string; // Added to support className prop
 }
 
-export const Card: FC<ICardProps> = ({
+const Card: FC<ICardProps> = ({
   title,
   description,
   animation,
@@ -27,3 +28,5 @@ export const Card: FC<ICardProps> = ({
     </div>
   );
 };
+
+export default Card;

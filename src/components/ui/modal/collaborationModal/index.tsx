@@ -1,7 +1,9 @@
 import React, { useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import styles from './styles.module.scss';
+
 import BackgroundAccents from '@/assets/icon/header__background.jpg';
+
+import styles from './styles.module.scss';
 
 interface CollaborationItem {
   image: string;
@@ -91,24 +93,24 @@ const CollaborationModal: React.FC<CollaborationModalProps> = ({
           className={styles.flipBook}
           style={{ margin: '0 auto' }}
           startPage={0}
-          size={'fixed'}
+          size="fixed"
           minWidth={400}
           maxWidth={600}
           minHeight={400}
           maxHeight={450}
-          drawShadow={true}
+          drawShadow
           flippingTime={600}
           usePortrait={false}
           startZIndex={0}
-          autoSize={true}
+          autoSize
           maxShadowOpacity={0}
           showCover={false}
           mobileScrollSupport={false}
-          clickEventForward={true}
-          useMouseEvents={true}
+          clickEventForward
+          useMouseEvents
           swipeDistance={30}
-          showPageCorners={true}
-          disableFlipByClick={true}
+          showPageCorners
+          disableFlipByClick
           ref={bookRef}
         >
           {pages}

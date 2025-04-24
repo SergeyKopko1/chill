@@ -1,3 +1,7 @@
+@use 'sass:color';
+
+$dark-blue: #1e3a8a;
+
 // Основные переменные
 $primary-color: #5e9ffb;
 $secondary-color: #ff7eb9;
@@ -167,7 +171,7 @@ $aurora-purple: #bf00ff;
 .step__description {
   animation: textOpacity 0.6s ease-out forwards;
 
-  color: lighten($dark-blue, 10%);
+  color: color.adjust($dark-blue, $lightness: 10%);
   line-height: 1.6;
   font-size: 1.1rem;
 }

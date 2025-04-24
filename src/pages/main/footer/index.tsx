@@ -1,11 +1,12 @@
-import styles from './styles.module.scss';
 import { FaTwitter, FaDiscord, FaInstagram, FaTelegram } from 'react-icons/fa';
 
-export const Footer = () => {
+import styles from './styles.module.scss';
+
+const Footer = () => {
   return (
     <footer id="footer" className={styles.footer}>
       <div className={styles.footer__content}>
-        <div className={styles.footer__snow}></div>
+        <div className={styles.footer__snow} />
 
         <div className={styles.footer__links}>
           <a
@@ -48,9 +49,11 @@ export const Footer = () => {
 
         <div className={styles.footer__credits}>
           <p>© 2023 Our Awesome ChillyBeary</p>
-          <div className={styles.penguin__track}></div>
+          <div className={styles.penguin__track} />
         </div>
       </div>
     </footer>
   );
 };
+
+export default Footer;

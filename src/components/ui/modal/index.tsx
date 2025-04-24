@@ -1,7 +1,11 @@
+import Image from 'next/image';
 import React, { useRef } from 'react';
 import HTMLFlipBook from 'react-pageflip';
-import styles from './styles.module.scss';
+
 import BackgroundAccens from '@/assets/icon/header__background.jpg';
+
+import styles from './styles.module.scss';
+
 interface PageData {
   background: string;
   description?: string;
@@ -31,7 +35,7 @@ const Modal: React.FC<ModalProps> = ({ onClose, cardInformation }) => {
           key={`page-${sectionIndex}-${pageIndex * 2 + 1}`}
           className={`${styles.demoPage} ${styles.leftPage}`}
         >
-          <img
+          <Image
             src={value.background || BackgroundAccens.src}
             alt={`${key} image ${pageIndex}`}
             className={styles.pageImage}
@@ -79,24 +83,24 @@ const Modal: React.FC<ModalProps> = ({ onClose, cardInformation }) => {
           className={styles.flipBook}
           style={{ margin: '0 auto' }}
           startPage={0}
-          size={'fixed'}
+          size="fixed"
           minWidth={400}
           maxWidth={600}
           minHeight={400}
           maxHeight={450}
-          drawShadow={true}
+          drawShadow
           flippingTime={600}
           usePortrait={false}
           startZIndex={0}
-          autoSize={true}
+          autoSize
           maxShadowOpacity={0}
           showCover={false}
           mobileScrollSupport={false}
-          clickEventForward={true}
-          useMouseEvents={true}
+          clickEventForward
+          useMouseEvents
           swipeDistance={30}
-          showPageCorners={true}
-          disableFlipByClick={true}
+          showPageCorners
+          disableFlipByClick
           ref={bookRef}
         >
           {pages}

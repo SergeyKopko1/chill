@@ -1,9 +1,11 @@
+import { gsap } from 'gsap';
 import React, { useState, useRef } from 'react';
-import styles from './styles.module.scss';
+
 import BackgroundAccents from '@/assets/icon/header__background.jpg';
 import BookModal from '@/components/ui/modal';
 import CollaborationModal from '@/components/ui/modal/collaborationModal';
-import { gsap } from 'gsap';
+
+import styles from './styles.module.scss';
 
 interface PageData {
   background: string;
@@ -41,7 +43,7 @@ const CardInformation: { [key: string]: PageData[] } = {
   ],
 };
 
-export const BooksBlock: React.FC = () => {
+const BooksBlock: React.FC = () => {
   const [activeCard, setActiveCard] = useState<string | null>(null);
   const [snowRemoved, setSnowRemoved] = useState<{ [key: string]: boolean }>({
     Histories: false,
@@ -148,10 +150,16 @@ export const BooksBlock: React.FC = () => {
           <React.Fragment key={key}>
             <div
               className={styles.card__wrapper}
+              role="button"
+              tabIndex={0}
               ref={(el) => {
                 if (el) cardRefs.current[key] = el;
               }}
               onClick={() => handleCardClick(key)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === 'Space')
+                  handleCardClick(key);
+              }}
             >
               <div
                 className={styles.cardContent}

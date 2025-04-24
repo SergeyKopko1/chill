@@ -1,9 +1,9 @@
-import { FC } from 'react';
 import { AppProps } from 'next/app';
-import { CssBaseline } from '@mui/material';
 // import { Provider } from 'react-redux';
 import Router from 'next/router';
 import NProgress from 'nprogress';
+import { FC } from 'react';
+
 import AppTheme from '@/lib/theme';
 // import store from '@/store';
 

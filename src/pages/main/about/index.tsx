@@ -1,5 +1,6 @@
+import Card from '@/components/ui/card';
+
 import styles from './styles.module.scss';
-import { Card } from '@/components/ui/card';
 
 const dataAbout = {
   AboutUs: {
@@ -39,13 +40,13 @@ const dataAbout = {
   },
 };
 
-export const About = () => {
+const About = () => {
   return (
     <section id="about" className={styles.arctic__wrapper}>
       <div className={styles.iceberg__container}>
         <div className={styles.polar__header}>
           <span>Arctic Bearers</span>
-          <div className={styles.aurora}></div>
+          <div className={styles.aurora} />
         </div>
 
         <div className={styles.icewall__grid}>
@@ -62,12 +63,10 @@ export const About = () => {
               style={
                 {
                   '--ice-color': value.color,
-                  '--delay': index * 0.2 + 's',
+                  '--delay': `${index * 0.2}s`,
                 } as React.CSSProperties
               }
-              className={`${styles.iceblock} ${
-                styles[`iceblock--${index % 3}`]
-              }`}
+              className={`${styles.iceblock} ${styles[`iceblock--${index % 3}`]}`}
             />
           ))}
         </div>
@@ -79,3 +78,5 @@ export const About = () => {
     </section>
   );
 };
+
+export default About;

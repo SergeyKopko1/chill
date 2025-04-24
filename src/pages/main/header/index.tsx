@@ -1,17 +1,16 @@
+import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { FC, useState } from 'react';
-import { Button } from '@/components/ui/button';
-import styles from './styles.module.scss';
-import igloo from '@/assets/icon/Igloo.png';
-import Background from '@/assets/icon/header__background.jpg';
+import { Snowfall } from 'react-snowfall';
 import BearOne from '@/assets/icon/bear1.png';
 import BearTwo from '@/assets/icon/bear2.png';
 import BearThree from '@/assets/icon/bear3.png';
-import Image from 'next/image';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Snowfall } from 'react-snowfall';
-import CloseIcon from '@/assets/icon/CloseIcon.svg';
+import Background from '@/assets/icon/header__background.jpg';
+import igloo from '@/assets/icon/Igloo.png';
+import Button from '@/components/ui/button';
+import styles from './styles.module.scss';
 
-export const Header: FC = () => {
+const Header: FC = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
@@ -74,6 +73,7 @@ export const Header: FC = () => {
             transition={{ type: 'spring', damping: 25 }}
           >
             <button
+              type="button"
               className={styles.close__button}
               onClick={() => setMenuOpen(false)}
             >
@@ -158,7 +158,7 @@ export const Header: FC = () => {
             ease: 'easeInOut',
           }}
         >
-          THE CHILL'BE
+          THE CHILL\'BE
         </motion.span>
         <p>
           Chilly Beary is a global IP focused on proliferating the penguin,
@@ -194,3 +194,5 @@ export const Header: FC = () => {
     </section>
   );
 };
+
+export default Header;

@@ -1,8 +1,11 @@
+import Image from 'next/image';
 import { useState } from 'react';
-import styles from './styles.module.scss';
+
 import ingloo from '@/assets/icon/Igloo.png';
 
-export const Information = () => {
+import styles from './styles.module.scss';
+
+const Information = () => {
   const [isModalOpen, setModalOpen] = useState(false);
   const [selectedContent, setSelectedContent] = useState<null | number>(null);
 
@@ -52,7 +55,7 @@ export const Information = () => {
                 ))}
               </div>
               <div className={styles.door__content}>
-                <img
+                <Image
                   src={igloo.image}
                   alt={igloo.text}
                   className={styles.door__image}
@@ -76,13 +79,17 @@ export const Information = () => {
             <div className={styles.modal__content}>
               {iglooData[selectedContent! - 1].videoUrl ? (
                 <iframe
+                  title="Unique description of the iframe content"
                   src={iglooData[selectedContent! - 1].videoUrl}
                   className={styles.video__block}
                   allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 />
               ) : (
-                <img
-                  src={iglooData[selectedContent! - 1].imageUrl?.src}
+                <Image
+                  src={
+                    iglooData[selectedContent! - 1].imageUrl?.src ??
+                    '/fallback-image.jpg'
+                  }
                   alt="Igloo content"
                   className={styles.modal__image}
                 />
@@ -97,3 +104,5 @@ export const Information = () => {
     </section>
   );
 };
+
+export default Information;

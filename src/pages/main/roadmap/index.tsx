@@ -1,8 +1,10 @@
 import { useState, useEffect } from 'react';
-import styles from './styles.module.scss';
+
 import stepImage from '@/assets/icon/step.png';
 
-export const Roadmap = () => {
+import styles from './styles.module.scss';
+
+const Roadmap = () => {
   const [animatedCards, setAnimatedCards] = useState<number[]>([]);
 
   useEffect(() => {
@@ -80,3 +82,5 @@ export const Roadmap = () => {
     </section>
   );
 };
+
+export default Roadmap;
