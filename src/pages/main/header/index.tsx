@@ -157,7 +157,7 @@ const Header: FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-        ></motion.span>
+        />
         <p>
           Chilly Beary is a global IP focused on proliferating the penguin,
           memetic culture, and good vibes.
