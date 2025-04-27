@@ -158,6 +158,7 @@ const Header: FC = () => {
             ease: 'easeInOut',
           }}
         />
+        ChillyBeary
         <p>
           Chilly Beary is a global IP focused on proliferating the penguin,
           memetic culture, and good vibes.
