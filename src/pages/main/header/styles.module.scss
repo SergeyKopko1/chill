@@ -1,5 +1,7 @@
+/* Переменные */
 $primary-blue: #e6f7ff;
 
+/* Базовые настройки контейнера */
 .container__header__main {
   position: relative;
   width: 100%;
@@ -20,11 +22,32 @@ $primary-blue: #e6f7ff;
   }
 }
 
+/* Контейнер фона */
+.background__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Шапка */
 .container__header {
   width: 100%;
   height: 100vh;
   position: absolute;
-  background: linear-gradient(180deg, #2b90cc 70%, rgba(43, 145, 205, 0));
+  top: 0;
+  left: 0;
+  background: linear-gradient(180deg, #2b90cc 40%, rgba(43, 145, 205, 0) 100%);
 
   > div {
     z-index: 1000;
@@ -32,188 +55,257 @@ $primary-blue: #e6f7ff;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw 7vw 0;
 
-    > img {
-      height: auto;
-      object-fit: contain;
-      width: 220px;
-      height: 200px;
-      filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
-    }
-
-    > div > button {
-      font-family: 'Chill';
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(10px);
-      border: 2px solid white;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      transition: all 0.3s ease;
-      cursor: pointer;
-
-      &:hover {
-        background: rgba(255, 255, 255, 0.4);
-        transform: translateY(-3px);
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-      }
+    @media (max-width: 768px) {
+      padding: 1rem 0rem;
     }
   }
 }
 
-.close__button {
-  top: -15px;
-  right: -15px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: white;
-  border: 2px solid $primary-blue;
-  font-size: 1.5rem;
+/* Кнопка */
+.button {
+  font-family: 'Chill';
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 3px solid #fff;
+  color: white;
+
+  margin: 1vh 2vw;
+  border-radius: 50px;
+  font-size: 24px;
   cursor: pointer;
   transition: all 0.3s ease;
+  text-align: center;
 
   &:hover {
-    transform: scale(1.1) rotate(15deg);
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  }
+
+  @media (max-width: 480px) {
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+  }
+
+  @media (min-width: 768px) {
+    width: 220px;
+    height: 80px;
+    font-size: 22px;
   }
 }
 
+/* Логотип Иглу */
+.Igloo {
+  width: 8vw;
+  height: auto;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.7));
+
+  @media (max-width: 768px) {
+    width: 60px;
+  }
+
+  @media (max-width: 480px) {
+    width: 50px;
+  }
+}
+
+/* Меню */
 .menu {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 20vh;
+  height: 30vh;
   background: rgba(43, 143, 205, 0.76);
   backdrop-filter: blur(10px);
   z-index: 10000;
-  padding: 2rem;
-  border-bottom: 3px solid white;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  border-bottom: 3px solid white;
+
+  @media (max-width: 480px) {
+    height: 40vh;
+    padding: 0.5rem;
+  }
 
   .menuContent {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    flex-wrap: wrap;
-    padding-top: 80px;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      justify-content: center;
+      gap: 2rem;
+    }
 
     a {
       color: white;
-      font-size: 1.5rem;
+      font-family: 'Chill';
       text-decoration: none;
+      font-size: 1.2rem;
+      background: rgba(255, 255, 255, 0.1);
       padding: 0.5rem 1rem;
       border-radius: 50px;
-      background: rgba(255, 255, 255, 0.1);
       transition: all 0.3s ease;
-      font-family: 'Chill';
+      text-align: center;
 
       &:hover {
         background: rgba(255, 255, 255, 0.3);
+      }
+
+      @media (max-width: 480px) {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
       }
     }
   }
 }
 
 .close__button {
-  position: relative;
-  top: 0;
-  right: 0;
-  width: 50px;
-  height: 50px;
-  border: 3px solid $primary-blue;
-  font-size: 2rem;
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid $primary-blue;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+  transition: all 0.3s ease;
+  font-family: 'Courier New', Courier, monospace;
 
-.background__header {
-  padding-top: 0vh;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
+  &:hover {
+    transform: scale(1.1) rotate(15deg);
+  }
 
-  > img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  @media (max-width: 480px) {
+    width: 35px;
+    height: 35px;
+    font-size: 1.2rem;
   }
 }
 
+/* Текст в шапке */
 .text__header {
+  position: absolute;
   z-index: 999;
-  position: relative;
   text-align: center;
-  padding: 15rem 1rem;
-  flex-grow: 1;
+  width: 100%;
+  top: 3%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-
-  > span:first-child {
+  align-items: center;
+  font-size: 12vw;
+  > span {
     font-weight: 500;
     color: #fff;
-    font-size: 3rem;
     text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
     font-family: 'Chill';
-    letter-spacing: 2px;
-
-    @media (min-width: 768px) {
-      font-size: 16vw;
-    }
+  }
+  @media (max-width: 480px) {
+    font-size: 15vw;
+    top: 10%;
   }
 
-  > p:last-child {
-    margin: 1rem auto;
-    max-width: 90%;
+  @media (max-width: 560px) {
+    font-size: 15vw;
+    top: 10%;
+  }
+  @media (min-width: 768px) {
+    font-size: 16vw;
+    top: 6%;
+  }
+
+  > p {
+    max-width: 50%;
     color: #ffffff;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 2vw;
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
     font-family: 'Chill';
 
     @media (min-width: 768px) {
-      max-width: 750px;
-      font-size: 1.8rem;
+      max-width: 70%;
     }
   }
 }
 
+/* Медведи в шапке */
 .bears__header {
-  position: relative;
-  margin-top: auto;
+  position: absolute;
+  bottom: 0;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  border-bottom: 1px solid #fff;
-  z-index: 10;
+  border-bottom: 4px solid #000;
+  z-index: 100000;
+  padding-bottom: 1rem;
 
   > div {
     > img {
       position: relative;
-      top: 40px;
-      max-width: 650px;
-      max-height: 600px;
-      opacity: 0.9;
-      border-radius: 20% 20%;
+      bottom: 100px;
+      width: 350px;
+      height: 350px;
+      opacity: 1;
+      border-radius: 20%;
       filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.5));
+      object-fit: contain;
+
+      @media (max-width: 480px) {
+        max-width: 150px;
+        max-height: 200px;
+        top: 55px;
+      }
+
+      @media (max-width: 480px) {
+        max-width: 150px;
+        max-height: 200px;
+        top: 55px;
+      }
+
+      @media (min-width: 540px) {
+        max-width: 250px;
+        max-height: 350px;
+        top: 90px;
+      }
+
+      @media (min-width: 768px) {
+        max-width: 450px;
+        max-height: 400px;
+        top: 45px;
+      }
     }
   }
 
   > div:nth-child(1) {
     > img {
-      left: 5vw;
+      left: 0;
       animation: float 4s ease-in-out infinite;
+
+      @media (max-width: 480px) {
+        left: 60px;
+      }
+
+      @media (min-width: 540px) {
+        left: 90px;
+      }
+
+      @media (min-width: 768px) {
+        left: 100px;
+      }
     }
   }
 
@@ -227,28 +319,19 @@ $primary-blue: #e6f7ff;
   > div:nth-child(3) {
     z-index: 1;
     > img {
-      left: -5vw;
+      left: 0;
       animation: float 4.5s ease-in-out infinite 0.3s;
-    }
-  }
 
-  @media (min-width: 768px) {
-    > div {
-      > img {
-        max-width: 650px;
-        max-height: 600px;
+      @media (max-width: 480px) {
+        left: -60px;
       }
-    }
 
-    > div:nth-child(1) {
-      > img {
-        left: 200px;
+      @media (min-width: 540px) {
+        left: -90px;
       }
-    }
 
-    > div:nth-child(3) {
-      > img {
-        left: -250px;
+      @media (min-width: 768px) {
+        left: -100px;
       }
     }
   }
@@ -256,41 +339,12 @@ $primary-blue: #e6f7ff;
 
 @keyframes float {
   0% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
   50% {
-    transform: translateY(-20px);
+    transform: translateY(-10px);
   }
   100% {
-    transform: translateY(0px);
+    transform: translateY(0);
   }
-}
-
-.button {
-  font-family: 'Chill';
-  position: relative;
-  overflow: hidden;
-
-  &::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: white;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-  }
-}
-
-.Igloo {
-  width: 8vw;
-  height: auto;
 }

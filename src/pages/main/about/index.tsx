@@ -4,37 +4,31 @@ import styles from './styles.module.scss';
 
 const dataAbout = {
   AboutUs: {
-    title: 'Кто мы такие',
+    title: 'Who We Are',
     description:
-      'Мы команда как дружные медвежата - сильные вместе и заботливые к каждому проекту! Наш опыт - это как медвежья берлога, уютная и надежная.',
+      'We are a team like friendly little bears — strong together and caring for every project! Our experience is like a bear’s den — cozy and reliable.',
     emoji: '🐻',
     color: '#FF9E9E',
   },
-  YourMission: {
-    title: 'Наша миссия',
-    description:
-      'Как медведь добывает мед, мы добываем лучшие решения для вас. Наша цель - сделать ваш digital-опыт сладким как мед!',
-    emoji: '🍯',
-    color: '#FFD6A5',
-  },
+
   YourWork: {
-    title: 'Как мы работаем',
+    title: 'How We Work',
     description:
-      'По-медвежьи основательно! Каждый этап продуман как подготовка к зимней спячке - ничего не упускаем и делаем на совесть.',
+      'Thoroughly, like bears! Every stage is carefully thought out, like preparing for winter hibernation — we leave nothing to chance and do everything with care.',
     emoji: '🛠️',
     color: '#CBFFA9',
   },
   WhatBears: {
-    title: 'Почему мы?',
+    title: 'Why Us?',
     description:
-      'Потому что мы сильны как бурый мишка, быстры как панда и дружелюбны как мишка Тедди! 10 лет опыта в digital-лесу.',
+      'Because we are strong like a brown bear, fast like a panda, and friendly like Teddy! 10 years of experience in the digital forest.',
     emoji: '❓',
     color: '#A0C4FF',
   },
   Commands: {
-    title: 'Наша команда',
+    title: 'Our Team',
     description:
-      'Разнообразная как виды медведей - дизайнеры-панды, разработчики-гризли, маркетологи-полярные мишки. Всех объединяет сила и теплота!',
+      'Diverse like bear species — panda designers, grizzly developers, and polar bear marketers. United by strength and warmth!',
     emoji: '👥',
     color: '#BDB2FF',
   },

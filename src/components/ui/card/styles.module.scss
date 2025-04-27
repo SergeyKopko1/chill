@@ -1,21 +1,64 @@
 .wrapper_container {
-  width: 350px;
-  height: 300px;
+  z-index: 100;
+  width: 100%; // Изменено с фиксированной ширины на адаптивную
+  max-width: 100%; // Максимальная ширина как у оригинала
+  height: auto; // Высота стала автоматической
+  min-height: 250px; // Минимальная высота
   border-radius: 5px;
-  border: 3px solid #000;
-  padding-inline: 20px;
-  margin-top: 50px;
+  border: 2px solid #000; // Уменьшил толщину границы
+  padding: 15px; // Упростил padding
+  margin-top: 30px; // Уменьшил отступ сверху
   overflow: hidden;
+  background: url('/icon/card__bckground.jpg') center/cover no-repeat;
+
+  // Планшетная версия
+  @media (max-width: 480px) {
+    max-width: 290px;
+    min-height: 200px;
+    padding-inline: 15px;
+    border-width: 2.5px;
+  }
+
+  // Десктопная версия
+  @media (min-width: 768px) {
+    width: 270px;
+    height: 300px;
+    padding-inline: 20px;
+    border-width: 3px;
+    margin-top: 50px;
+  }
 }
 
 .title {
   font-weight: 600;
-  font-size: 24px;
+  font-size: 18px;
+
+  // Планшет
+  @media (max-width: 480px) {
+    font-size: 18px;
+  }
+
+  // Десктоп
+  @media (min-width: 768px) {
+    font-size: 22px;
+  }
 }
 
 .description {
   color: #000;
   font-weight: 600;
-  font-size: 20px;
-  width: 90%;
+  font-size: 16px; // Уменьшен размер шрифта
+  width: 100%; // На мобильных занимает всю ширину
+
+  // Планшет
+  @media (max-width: 480px) {
+    font-size: 16px;
+    width: 90%;
+  }
+
+  // Десктоп
+  @media (min-width: 768px) {
+    font-size: 18px;
+    width: 90%;
+  }
 }

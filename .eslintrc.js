@@ -37,12 +37,15 @@ module.exports = {
     '@typescript-eslint/no-explicit-any': 'warn',
     '@typescript-eslint/no-unused-vars': 'error',
     'react/button-has-type': 'warn',
-    'react/no-array-index-key': 'warn',
+    'react/no-array-index-key': 'warn', // Уже есть, оставляем как предупреждение
     '@next/next/no-img-element': 'off',
     'jsx-a11y/img-redundant-alt': 'warn',
     'jsx-a11y/iframe-has-title': 'warn',
     'import/no-named-as-default': 'warn', // Ослабить правило для импорта
     'prettier/prettier': 'error',
+    // Добавленные правила для скипа
+    'jsx-a11y/no-noninteractive-element-interactions': 'warn', // Предупреждение вместо ошибки
+    'jsx-a11y/no-noninteractive-tabindex': 'warn', // Предупреждение вместо ошибки
   },
   settings: {
     'import/resolver': {

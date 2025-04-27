@@ -32,7 +32,7 @@ const Information = () => {
 
   return (
     <section id="information" className={styles.container__information__main}>
-      <p>Information</p>
+      <p className={styles.section__title}>Information</p>
       <div className={styles.igloos__grid}>
         {iglooData.map((igloo) => (
           <div
@@ -42,7 +42,7 @@ const Information = () => {
           >
             <div className={styles.igloo__door}>
               <div className={styles.snowflakes}>
-                {Array.from({ length: 20 }).map((_, i) => (
+                {Array.from({ length: 15 }).map((_, i) => (
                   <div
                     key={i}
                     className={styles.snowflake}
@@ -56,9 +56,12 @@ const Information = () => {
               </div>
               <div className={styles.door__content}>
                 <Image
+                  width={120}
+                  height={120}
                   src={igloo.image}
                   alt={igloo.text}
                   className={styles.door__image}
+                  priority={igloo.id < 3}
                 />
                 <p className={styles.click__text}>{igloo.text}</p>
               </div>
@@ -78,21 +81,28 @@ const Information = () => {
             </button>
             <div className={styles.modal__content}>
               {iglooData[selectedContent! - 1].videoUrl ? (
-                <iframe
-                  title="Unique description of the iframe content"
-                  src={iglooData[selectedContent! - 1].videoUrl}
-                  className={styles.video__block}
-                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                />
+                <div className={styles.video__container}>
+                  <iframe
+                    title={iglooData[selectedContent! - 1].text}
+                    src={iglooData[selectedContent! - 1].videoUrl}
+                    className={styles.video__block}
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
               ) : (
-                <Image
-                  src={
-                    iglooData[selectedContent! - 1].imageUrl?.src ??
-                    '/fallback-image.jpg'
-                  }
-                  alt="Igloo content"
-                  className={styles.modal__image}
-                />
+                <div className={styles.image__container}>
+                  <Image
+                    width={300}
+                    height={200}
+                    src={
+                      iglooData[selectedContent! - 1].imageUrl?.src ??
+                      '/fallback-image.jpg'
+                    }
+                    alt="Igloo content"
+                    className={styles.modal__image}
+                  />
+                </div>
               )}
               <p className={styles.iced__text}>
                 {iglooData[selectedContent! - 1].text}

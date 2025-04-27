@@ -5,7 +5,7 @@ import { Snowfall } from 'react-snowfall';
 import BearOne from '@/assets/icon/bear1.png';
 import BearTwo from '@/assets/icon/bear2.png';
 import BearThree from '@/assets/icon/bear3.png';
-import Background from '@/assets/icon/header__background.jpg';
+import Background from '@/assets/icon/header__background.png';
 import igloo from '@/assets/icon/Igloo.png';
 import Button from '@/components/ui/button';
 import styles from './styles.module.scss';
@@ -21,7 +21,7 @@ const Header: FC = () => {
           snowflakeCount={100}
           speed={[0.5, 1.5]}
           wind={[-0.5, 0.5]}
-          radius={[0.5, 2]}
+          radius={[0.5, 4]}
         />
       </div>
 
@@ -157,9 +157,7 @@ const Header: FC = () => {
             repeat: Infinity,
             ease: 'easeInOut',
           }}
-        >
-        THE CHILL BE
-        </motion.span>
+        ></motion.span>
         <p>
           Chilly Beary is a global IP focused on proliferating the penguin,
           memetic culture, and good vibes.

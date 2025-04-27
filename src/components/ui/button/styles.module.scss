@@ -3,10 +3,12 @@ $base-color: #80abff;
 .button {
   width: 175px;
   height: 65px;
-  border-radius: 5px;
-  border: 2px solid #000;
+  border-radius: 35px;
+  border: 2px solid #ffffff;
   background: $base-color;
   position: relative;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  font-family: 'Chill';
 }
